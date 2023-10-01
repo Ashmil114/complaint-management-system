@@ -1,0 +1,94 @@
+<!-- <h1>{{data}}</h1> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div class="main" >
+        <div class='box'> 
+            <h3>{{data[0][3]}} </h3>
+            <h4>Suggestion :</h4>
+            <p> {{data[0][4]}} </p>
+            <form action="" method="post">
+                <div><label for="">Write Your Solution : </label></div>
+                <textarea  class ="in" name="solution" id="" cols="30" rows="3" required></textarea>
+                <div class="btn"><input class='submit' type="submit"></div>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width:700px;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        h3{
+            width: 100%;
+            text-align: center;
+            background-color: #f0483f;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+            font-weight: bolder;
+            box-sizing: border-box;
+        }
+        h4{
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+            font-weight: bolder;
+            box-sizing: border-box;
+        }
+        p{
+            width: 100%;
+            margin: 0;
+            padding: 20px;
+            padding-left: 100px;
+            box-sizing: border-box;
+        }
+        form{
+            width: 100%;
+            height: 200px;
+            margin-top: 20px;
+        }
+        label{
+            padding: 10px;
+            font-weight: bolder;
+            
+        }
+        .in{
+            margin: 20px;
+            width: 95%;
+            outline: none;
+            border: 1px solid black;
+        }
+        .btn{
+            width: 100%;
+            text-align: center;
+        }
+        .submit{
+            background-color: rgb(1, 192, 96);
+            outline: none;
+            border: none;
+            color: #fff;
+            width: 200px;
+            height: 30px;
+        }
+        .submit:hover{
+            background-color: rgb(1, 161, 81) ;
+        }
+    </style>
+</body>
+</html>

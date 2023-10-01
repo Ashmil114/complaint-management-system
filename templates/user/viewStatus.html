@@ -1,0 +1,53 @@
+
+{% extends 'userBase.html' %}
+{% block title %}View{% endblock %}
+{% block name %}{{user[0][1]}}{% endblock %}
+{% block email %}{{user[0][2]}}{% endblock %}
+{% block content %}
+
+
+{%if s == 1 %}
+    <table>
+        <tr>
+        <th>Problem</th>
+        <th>Status</th>
+        <th>Solution</th>
+        </tr>
+            
+            {% for item in complaints %}
+                <tr>
+                    <td>{{item[3]}}</td>
+                    <td>{{item[5]}}</td>
+                    <td>{{item[6]}}</td>
+                </tr>
+            {% endfor %}
+    </table>
+{%else%}
+    <p>No Complaints are founded</p>
+{% endif %}
+
+
+<style>
+    table{
+        border: 1px solid black;
+        width: 700px;
+        
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+    td{
+        font-weight: bold;
+    }
+    th{
+        background-color: #f0483f;
+        color: #fff;
+        font-weight: bolder;
+    }
+    .view{
+        background-color: #f01c11;
+    }
+
+</style>
+{% endblock %} 

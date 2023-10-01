@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+
+<div class="main">
+    <form action="#" method="post">
+        <div>
+            <div class="title">
+                <h2>ADMIN LOGIN</h2>
+            </div>
+            <div class="flash">
+                {% for message in get_flashed_messages() %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            <div class="form-items">
+                <div class="form-item">
+                    <div class="label"><label for="">Username</label></div>
+                    <div class="field">
+                        <input type="text" name="username"  required>
+                    </div>
+                    <div class="label"><label for="">Password</label></div>
+                    <div class="field">
+                        <input type="password" name="password"  required>
+                    </div>
+                    <div class="field">
+                        <input class="submit" type="submit" value="Login"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="admin"><p>Back to home ? <a href="/">Click Here</a></p></div>
+        </div>
+    </form>
+</div>
+
+<style>
+    .main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        width: 300px;
+        height: 350px;
+        /* background-color: rgb(255, 134, 104); */
+        border: 1px solid black;
+    }
+    form .title{
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        background-color: #f0483f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid  black;
+    }
+    form .title h2{
+        margin: 0;
+        color: #fff;
+    }
+    .flash{
+        color: red;
+        text-align: center
+    }
+    .form-items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .form-item{
+        width: 100%;
+        height: 300px;
+        margin-top: 20px;
+        
+    }
+    .field{
+        width: 100%;
+        text-align: center;
+        
+    }
+    .label{
+        height: 10px;
+        margin-bottom: 5px;
+        margin-left: 30px;
+    }
+    input{
+        padding: 8px;
+        margin: 10px;
+        outline: none;
+        width: 80%;
+    }
+    .submit{
+        background-color: rgb(1, 192, 96);
+        outline: none;
+        border: none;
+        color: #fff;
+    }
+    .submit:hover{
+        background-color: rgb(1, 161, 81) ;
+    }
+    .admin{
+        text-align: center;
+    }
+</style>
+{% endblock %}

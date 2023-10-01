@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="main">
+        <div class="side">
+            <div class="icon">
+                <img src="{{ url_for('static', filename='/icons/user.png') }}" alt="">
+            </div>
+            <div class="username">
+                <div><h2>Hello {% block name %}{{user[0][1]}}{% endblock %} !</h2></div>
+            </div>
+            <div class="email">
+                <div><p>{% block email %}{{user[0][2]}}{% endblock %}</p></div>
+            </div>
+            <div class="btns">
+                <div class="cmplt">
+                    <a href="/user/register">Register Complaint -</a>
+                </div>
+                <div class="view">
+                    <a href="/user/view">View Status -</a>
+                </div>
+                <div class="logout">
+                    <a href="/login">Logout -</a>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+        }
+        .side{
+            width: 20%;
+            height: 100vh;
+            background-color: #f0483f;
+        }
+        .icon{
+            width: 100%;
+            height: 180px;
+            /* background-color: black; */
+        }
+        .username{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+        }
+        h4{
+            margin: 0;
+        }
+        .email{
+            width: 100%;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 15px;
+        }
+        .btns{
+            width: 100%;
+            height: 300px;
+            margin-top: 80px;
+        }
+        .cmplt{
+            padding: 20px;
+            text-align: end;
+            width: 100%;
+            box-sizing: border-box;
+            
+        }
+        .view{
+            
+            padding: 20px;
+            text-align: end;
+        }
+        .logout{
+            
+            padding: 20px;
+            text-align: end;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+    
+        }
+        .cmplt:hover,.view:hover,.logout:hover{
+            background-color: #f01c11;
+        }
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            filter: invert();
+            
+        }
+        .body{
+            width: 80%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+    </style>
+</body>
+</html>
+
+
+
